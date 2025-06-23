@@ -1,4 +1,5 @@
--- Bootstrap lazy.nvim
+-- Bootstraps lazy.nvim, a plugin manager for Neovim.
+-- It ensures that lazy.nvim is installed and then sets up the plugins.
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({

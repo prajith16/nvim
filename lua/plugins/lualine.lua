@@ -42,7 +42,6 @@ return {
         local mode = {
             'mode',
             fmt = function(str)
-                -- return ' ' 
                 -- displays only the first character of the mode
                 return ' ' .. str
             end,
@@ -52,7 +51,6 @@ return {
             'diff',
             colored = true,
             symbols = { added = ' ', modified = ' ', removed = ' ' }, -- changes diff symbols
-            -- cond = hide_in_width,
         }
 
         local filename = {
@@ -77,14 +75,10 @@ return {
                 lualine_c = { diff, filename },
 				lualine_x = {
 					{
-                        -- require("noice").api.statusline.mode.get,
-                        -- cond = require("noice").api.statusline.mode.has,
 						lazy_status.updates,
 						cond = lazy_status.has_updates,
 						color = { fg = "#ff9e64" },
 					},
-					-- { "encoding",},
-					-- { "fileformat" },
 					{ "filetype" },
 				},
 			},

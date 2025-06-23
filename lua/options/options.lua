@@ -39,15 +39,6 @@ vim.opt.formatoptions:append({"r"})
 vim.opt.fillchars = {eob = " "}
 vim.env.DOTNET_ROOT = "/opt/homebrew/share/dotnet"
 
-
-
-
-
-
-
-
-
-
 -- Toggle LSP diagnostics visibility
 local isLspDiagnosticsVisible = true
 vim.keymap.set("n", "<leader>lx", function()

@@ -1,16 +1,11 @@
- return  {
+return  {
         "rose-pine/neovim",
         name = "rose-pine",
-        -- priority = 1000,
         config = function()
             require("rose-pine").setup({
                 variant = "main",      -- auto, main, moon, or dawn
                 dark_variant = "main", -- main, moon, or dawn
                 dim_inactive_windows = false,
-                -- disable_background = true,
-                -- 	disable_nc_background = false,
-                -- 	disable_float_background = false,
-                -- extend_background_behind_borders = false,
                 styles = {
                     bold = true,
                     italic = false,
@@ -32,8 +27,7 @@
 
             })
 
-            -- HACK: set this on the color you want to be persistent
-            -- when quit and reopening nvim
-           vim.cmd("colorscheme rose-pine")
+            -- Set the colorscheme
+            vim.cmd("colorscheme rose-pine")
         end,
  }

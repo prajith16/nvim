@@ -5,18 +5,13 @@ return {
       require("mason").setup()
     end,
   },
- {
-     "williamboman/mason-lspconfig.nvim",
-      config = function()
-        require("mason-lspconfig").setup( {
-          ensure_installed = {  "angularls",
-            "lua_ls",
-            "html",
-            "cssls",
-            "ts_ls",
-        }
-        })
-     end
+  {
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require("mason-lspconfig").setup({
+        ensure_installed = { "angularls", "lua_ls", "html", "cssls", "ts_ls", "csharp_ls" },
+      })
+    end,
   },
   {
     "neovim/nvim-lspconfig",
@@ -28,25 +23,16 @@ return {
 
       local on_attach = function(client, bufnr)
         local keymap = vim.keymap.set
-        keymap(
-          "n",
-          "K",
-          vim.lsp.buf.hover,
-          { buffer = bufnr, desc = "Show documentation for what is under cursor" }
-        )
+        keymap("n", "K", vim.lsp.buf.hover, { buffer = bufnr, desc = "Show documentation for what is under cursor" })
         keymap("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition", buffer = bufnr })
         keymap("n", "gr", vim.lsp.buf.references, { desc = "Go to references", buffer = bufnr })
         keymap("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation", buffer = bufnr })
         keymap("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions", buffer = bufnr })
       end
 
-      local servers = { "csharp_ls", "html", "cssls", "angularls" ,"ts_ls"}
+      local servers = { "html", "cssls", "ts_ls", "csharp_ls" }
 
-      require("mason-lspconfig").setup({
-        ensure_installed = servers,
-      })
-
-       -- configure angular server
+      -- configure angular server
       lspconfig["angularls"].setup({
         capabilities = capabilities,
         on_attach = on_attach,
