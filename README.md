@@ -20,6 +20,23 @@ This is a personalized Neovim configuration with a focus on providing a modern a
 - **[toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)**: A plugin for managing terminals in Neovim.
 - **[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)**: A plugin for using Tree-sitter parsers for syntax highlighting, indentation, and more.
 
+### Additional Plugins
+
+- **[andweeb/presence.nvim](https://github.com/andweeb/presence.nvim)**: Discord/Slack presence integration.
+- **[APZelos/blamer.nvim](https://github.com/APZelos/blamer.nvim)**: Git blame annotations in the gutter.
+- **[folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim)**: Highlight and search for TODO/FIXME/NOTE comments.
+- **[HiPhish/rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim)**: Rainbow parentheses and delimiters.
+- **[lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)**: Git signs in the sign column.
+- **[lukas-reineke/headlines.nvim](https://github.com/lukas-reineke/headlines.nvim)**: Enhanced markdown headlines and UI.
+- **[mikavilpas/yazi.nvim](https://github.com/mikavilpas/yazi.nvim)**: Modern TUI file manager integration.
+- **[nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)**: Utility functions for plugins.
+- **[romainl/vim-cool](https://github.com/romainl/vim-cool)**: Improved search highlighting.
+- **[stevearc/dressing.nvim](https://github.com/stevearc/dressing.nvim)**: UI select/prompt enhancements.
+- **[tpope/vim-commentary](https://github.com/tpope/vim-commentary)**: Easy commenting in normal and visual mode.
+- **[DaikyXendo/nvim-material-icon](https://github.com/DaikyXendo/nvim-material-icon)**: Material design file icons.
+- **[gelguy/wilder.nvim](https://github.com/gelguy/wilder.nvim)**: Command line completion popup.
+- **[j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim)**: LSP progress UI.
+
 ## Keymaps
 
 | Keymap           | Description                                             |
@@ -65,3 +82,12 @@ This is a personalized Neovim configuration with a focus on providing a modern a
 | `<leader>fg`     | Live grep using Telescope                               |
 | `<leader>fb`     | Find buffers using Telescope                            |
 | `<leader>fh`     | Find help tags using Telescope                          |
+
+## Keymaps (additional)
+
+| Keymap      | Description                                       |
+| ----------- | ------------------------------------------------- |
+| `<leader>n` | Open Yazi file manager in current directory       |
+| `<leader>N` | Open Yazi file manager in root directory          |
+| `<leader>c` | Comment/uncomment lines (vim-commentary)          |
+| `<leader>t` | Toggle NvimTree / Toggle floating terminal / Yazi |
