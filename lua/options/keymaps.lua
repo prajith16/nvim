@@ -71,6 +71,8 @@ keymap("n", "<C-S-j>", "<C-w>-")
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+keymap("n", "<Leader>y", ":%y<CR>")
+
 -- Diagnostics
 keymap("n", "<C-j>", function()
 	vim.diagnostic.goto_next()

@@ -67,9 +67,17 @@ return {
   -- Utility library for plugins
   { "nvim-lua/plenary.nvim", lazy = true },
   -- Improved search highlighting
-  "romainl/vim-cool",
+ { "romainl/vim-cool" },
   -- UI select/prompt enhancements
-  "stevearc/dressing.nvim",
+  {
+    "stevearc/dressing.nvim",
+    dependencies = { "MunifTanjim/nui.nvim" },
+    opts = {},
+    config = function()
+      require("dressing").setup()
+    end,
+  },
+
   -- Easy commenting
   {
 	"tpope/vim-commentary",
